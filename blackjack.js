@@ -1,46 +1,7 @@
 let cards = {
   deck: [
-    1,
-    1,
-    1,
-    1,
-    2,
-    2,
-    2,
-    2,
-    3,
-    3,
-    3,
-    3,
-    4,
-    4,
-    4,
-    4,
-    5,
-    5,
-    5,
-    5,
-    6,
-    6,
-    6,
-    6,
-    7,
-    7,
-    7,
-    7,
-    8,
-    8,
-    8,
-    8,
-    9,
-    9,
-    9,
-    9,
-    10,
-    10,
-    10,
-    10,
-  ],
+    1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7,
+    7, 7, 8, 8, 8, 8, 9, 9, 9, 9, 10, 10, 10, 10],
   player1Cards: [],
   player1CardsTotal: 0,
   dealerCards: [],
@@ -97,13 +58,13 @@ let cardMethods = {
     if (cards.player1CardsTotal === 21) {
       alert(
         `PLAYER DREW ${cards.player1Cards[cards.player1Cards.length - 1]}!!! ${
-          cards.player1CardsTotal
+        cards.player1CardsTotal
         } WINNER!!`
       );
     } else if (cards.player1CardsTotal > 21) {
       alert(
         `PLAYER DREW ${cards.player1Cards[cards.player1Cards.length - 1]}!!! ${
-          cards.player1CardsTotal
+        cards.player1CardsTotal
         } IS A PLAYER BUST YOU LOSE!!!`
       );
     }
@@ -124,7 +85,7 @@ let cardMethods = {
     } else if (cards.dealerCardsTotal > 21) {
       alert(
         `DEALER DREW ${
-          cards.dealerCards[cards.dealerCards.length - 1]
+        cards.dealerCards[cards.dealerCards.length - 1]
         }!! DEALER BUST ${cards.dealerCardsTotal}`
       );
     }
@@ -191,21 +152,21 @@ let cardMethods = {
     if (cards.player1CardsTotal === cards.dealerCardsTotal) {
       alert(
         `DEALER DREW ${
-          cards.dealerCards[cards.dealerCards.length - 1]
+        cards.dealerCards[cards.dealerCards.length - 1]
         } PUSH!!! TIE GAME!! ${cards.dealerCardsTotal} TO ${
-          cards.player1CardsTotal
+        cards.player1CardsTotal
         }`
       );
     } else if (cards.dealerCardsTotal > cards.player1CardsTotal) {
       alert(
         `DEALER WINS!! DEALER DREW ${
-          cards.dealerCards[cards.dealerCards.length - 1]
+        cards.dealerCards[cards.dealerCards.length - 1]
         }. ${cards.dealerCardsTotal} BEATS ${cards.player1CardsTotal}!!!`
       );
     } else {
       alert(
         `PLAYER WINS!! DEALER DREW ${
-          cards.dealerCards[cards.dealerCards.length - 1]
+        cards.dealerCards[cards.dealerCards.length - 1]
         }. ${cards.player1CardsTotal} BEATS ${cards.dealerCardsTotal}!!!`
       );
     }
