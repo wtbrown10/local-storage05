@@ -61,12 +61,14 @@ let cardMethods = {
         cards.player1CardsTotal
         } WINNER!!`
       );
+      location.reload();
     } else if (cards.player1CardsTotal > 21) {
       alert(
         `PLAYER DREW ${cards.player1Cards[cards.player1Cards.length - 1]}!!! ${
         cards.player1CardsTotal
         } IS A PLAYER BUST YOU LOSE!!!`
       );
+      location.reload();
     }
   },
 
@@ -80,7 +82,17 @@ let cardMethods = {
     document.getElementById("dealerOfCardsTotal").innerText =
       cards.dealerCardsTotal;
 
-    if (cards.dealerCardsTotal >= 17 && cards.dealerCardsTotal <= 20) {
+    if (cards.dealerCardsTotal === 21) {
+      alert(
+        `DEALER DREW ${cards.dealerCards[cards.dealerCards.length - 1]
+        }!!! ${
+        cards.dealerCardsTotal
+        } WINNER!!`
+      );
+      location.reload();
+    }
+
+    else if (cards.dealerCardsTotal >= 17 && cards.dealerCardsTotal <= 20) {
       this.checkForWinner();
     } else if (cards.dealerCardsTotal > 21) {
       alert(
@@ -88,6 +100,7 @@ let cardMethods = {
         cards.dealerCards[cards.dealerCards.length - 1]
         }!! DEALER BUST ${cards.dealerCardsTotal}`
       );
+      location.reload();
     }
   },
 
@@ -157,18 +170,21 @@ let cardMethods = {
         cards.player1CardsTotal
         }`
       );
+      location.reload();
     } else if (cards.dealerCardsTotal > cards.player1CardsTotal) {
       alert(
         `DEALER WINS!! DEALER DREW ${
         cards.dealerCards[cards.dealerCards.length - 1]
         }. ${cards.dealerCardsTotal} BEATS ${cards.player1CardsTotal}!!!`
       );
+      location.reload();
     } else {
       alert(
         `PLAYER WINS!! DEALER DREW ${
         cards.dealerCards[cards.dealerCards.length - 1]
         }. ${cards.player1CardsTotal} BEATS ${cards.dealerCardsTotal}!!!`
       );
+      location.reload();
     }
   },
 };
