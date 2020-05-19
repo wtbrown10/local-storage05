@@ -175,7 +175,7 @@ let cardMethods = {
       alert(
         `DEALER WINS!! DEALER DREW ${
         cards.dealerCards[cards.dealerCards.length - 1]
-        }. ${cards.dealerCardsTotal} BEATS ${cards.player1CardsTotal}!!!`
+        }. ${cards.dealerCardsTotal} BEATS! ${cards.player1CardsTotal}!!!`
       );
       location.reload();
     } else {
